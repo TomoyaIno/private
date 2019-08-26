@@ -5,11 +5,21 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': true %>
   </head>
 
   <body>
+    <div class="header">
+        <div class="user__info">
+          <ul>
+            <li class="logo" style="float :left">~日本の湯~</li>
+            <li class="logout" style="float :right">ログアウト</li>
+            <li class="new" style="float :right">投稿</li>
+            <li class="signin" style="float :right">サインイン</li>
+          </ul>
+        </div>
+    </div>
     <%= yield %>
   </body>
 </html>
