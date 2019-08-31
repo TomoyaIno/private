@@ -38,18 +38,15 @@ body{
   border-radius: 5px;
   box-shadow:2px 2px #dcdcdc;
 }
-.portion-title{
+.portion p{
   text-align:center;
 }
-.itiran{
-  height:150px;
-  margin:10px 10px;
+.article{
+  display:flex; 
+  border-bottom: 3px solid orange;
 }
-.main-part1, .main-part2, .main-part3{
-  height:150px;
-}
-.layout-photo{
-  float:left; 
+.article-text{
+  padding:5px 10px 5px 10px; 
 }
 .detail{
   width:300px;
@@ -72,7 +69,7 @@ body{
   border-radius: 5px;
   box-shadow:2px 2px #dcdcdc;
 }
-.ranking-title{
+.ranking p{
   text-align:center;
 }
 .recently{
