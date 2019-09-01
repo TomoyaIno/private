@@ -27,6 +27,7 @@ body{
   background-color:#faf0e6;
 }
 .top-image{
+  padding:10px 0 0 0;
   text-align: center;
 }
 .portion{
@@ -40,6 +41,7 @@ body{
 }
 .portion p{
   text-align:center;
+  border: 3px inset gray;
 }
 .article{
   display:flex; 

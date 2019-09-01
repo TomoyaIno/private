@@ -13,12 +13,16 @@
     <div class="header">
         <div class="user__info">
           <ul>
-            <li class="logo" style="float :left">~温泉物語~</li>
-            <li class="logout" style="float :right">ログアウト</li>
-            <li class="new" style="float :right">投稿</li>
-            <li class="signin" style="float :right">サインイン</li>
+            <li class="logo" style="float :left">
+              <%= link_to "~温泉物語~", root_path, class:'post' %></li>
+            <li class="logout" style="float :right">
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            <li class="new" style="float :right">
+              <%= link_to "投稿", new_product_path, class:'post' %></li>
+            <li class="signin" style="float :right">
+              <%= link_to "サインイン", user_session_path, class:'post' %></li>
           </ul>
-          <p>静岡の魅力！be more interested</p>
+          <p>静岡の魅力！極楽を提供します</p>
         </div>
     </div>
     <%= yield %>
