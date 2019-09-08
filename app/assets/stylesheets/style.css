@@ -29,6 +29,7 @@ body{
 .top-image{
   padding:10px 0 0 0;
   text-align: center;
+  border-radius:20px;
 }
 .portion{
    width:800px;
