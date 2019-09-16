@@ -1,13 +1,13 @@
  <div class="main_wrapper">
   <h3><詳細ページ></h3>
-  <div class="detail">
-   <div class="detail_title">
+  <div class="shousai">
+   <div class="shousai-title">
      <%= @product.title %>
      </div>
-   <div class="detail-image">
-     <img src="<%= @product.image_url %>" alt="<%= @product.title %>">
+   <div class="shousai-image" style="text-align:center">
+     <img src="<%= @product.image_url %>" alt="<%= @product.title %>"width="800" height="400">
      </div>
-     <div class="explain">
+     <div class="shousai-explain">
       <%= @product.explain %>
      </div>
      

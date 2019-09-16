@@ -48,6 +48,10 @@ body{
   display:flex; 
   border-bottom: 3px solid orange;
 }
+.portion a{
+  color:black;
+  text-decoration:none;
+}
 .article-text{
   padding:5px 10px 5px 10px; 
 }
@@ -84,4 +88,17 @@ body{
   border-radius: 5px;
   box-shadow:2px 2px #dcdcdc;
   text-align:center
+}
+.main_wrapper{
+  padding:0 30px;
+}
+.shousai-title{
+  padding:0 400px;
+  font-weight:50px;
+  font-size:24px;
+}
+.shousai-explain{
+  width:900px;
+  margin-left:320px;
+  
 }
