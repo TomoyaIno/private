@@ -100,5 +100,29 @@ body{
 .shousai-explain{
   width:900px;
   margin-left:320px;
-  
+}
+.post-flame{
+  font-weight:50px;
+  font-size:24px;
+  padding:20px 100px;
+  padding-bottom:10px;
+  text-align:center
+}
+.post-name{
+  border: medium solid #808080;
+  border-radius:5px;
+}
+.post-itiran{
+  display:inline-block;
+  margin:25px;
+}
+.text-xsmall{
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color:black;
+  font-size:15px;
+  height: 3em;
+    line-height: 2;
 }

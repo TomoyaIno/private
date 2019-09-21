@@ -1,11 +1,27 @@
 <div class="contents row">
-  <%= form_tag('/products', method: :post) do %>
-    <h3>
-      投稿する
-    </h3>
-    <input type="text" name="name" placeholder="Nickname">
-    <input type="text" name="image" placeholder="Image Url">
-    <textarea name="text" placeholder="text" rows="10" cols="30"></textarea>
-    <input type="submit" value="SEND">
-  <% end %>
+  <div class="post-flame">
+    <div class="post-name">
+      <p>温泉一覧</p>
+      <% @products.each do |product|%>
+      
+      
+       <a href="/products/<%= product.id %>/reviews/new" title="<%= product.title%>">
+        <div class="post-itiran">
+         <div class="title_">
+           <%= product.title %>
+         </div>
+         <div class="image_">
+           <img src="<%= product.image_url %>" width="300" height="150"></img>
+          </div>
+           <div class="text-xsmall">
+             <p>
+             <%= product.explain %>
+           </p>
+           </div>
+        </div>
+       </a>
+      
+      <% end %>
+    </div>
+  </div>
 </div>
