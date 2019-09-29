@@ -19,9 +19,15 @@
       </div>
   </div>
   
-  <div class="comment-flame">
+  <div class="comment-show">
    <h2>口コミ</h2>
-   
+    <ul style="padding: 0">
+     <% @product.reviews.each do |review| %>
+     <li style="border-bottom: dotted">
+      <h3><%= review.nickname %></h3>
+   <p><%= review.review%></p>
+     </li>
+  <% end %>
+    </ul>
   </div>
-  
  </div>

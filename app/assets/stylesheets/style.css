@@ -124,3 +124,9 @@ body{
   color:black;
   font-size:15px;
 }
+.evalute-flame{
+  border: medium solid #808080;
+}
+.comment-flame{
+  border: medium solid #b0c4de;
+}
