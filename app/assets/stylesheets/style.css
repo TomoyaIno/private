@@ -40,6 +40,10 @@ body{
   border-radius: 5px;
   box-shadow:2px 2px #dcdcdc;
 }
+.portion a{
+  color:black;
+  text-decoration:none;
+}
 .portion p{
   text-align:center;
   border: 3px inset gray;
@@ -48,7 +52,7 @@ body{
   display:flex; 
   border-bottom: 3px solid orange;
 }
-.portion a{
+.post-itiran a{
   color:black;
   text-decoration:none;
 }
@@ -117,11 +121,6 @@ body{
   margin:25px;
 }
 .text-xsmall{
-  width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color:black;
   font-size:15px;
 }
 .evalute-flame{

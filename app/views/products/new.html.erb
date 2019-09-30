@@ -5,8 +5,9 @@
       <% @products.each do |product|%>
       
       
-       <a href="/products/<%= product.id %>/reviews/new" title="<%= product.title%>">
+       
         <div class="post-itiran">
+          <a href="/products/<%= product.id %>/reviews/new" title="<%= product.title%>">
          <div class="title_">
            <%= product.title %>
          </div>
@@ -15,11 +16,12 @@
           </div>
            <div class="text-xsmall">
              <p>
-             <%= product.explain %>
+             <%= product.explain.truncate(25) %>
            </p>
            </div>
+           </a>
         </div>
-       </a>
+       
       
       <% end %>
     </div>
