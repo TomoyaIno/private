@@ -15,8 +15,13 @@
           <ul>
             <li class="logo" style="float :left">
               <%= link_to "~温泉物語~", root_path, class:'post' %></li>
+            <% if user_signed_in? %>
             <li class="logout" style="float :right">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              <li class="mypage" style="float: right">
+                <a href="/products/:product_id/users/<%= current_user.id %>">マイページ</a>
+              </li>
+              <% end %>
             <li class="new" style="float :right">
               <%= link_to "投稿", new_product_path, class:'post' %></li>
             <li class="signin" style="float :right">

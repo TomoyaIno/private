@@ -1,0 +1,25 @@
+<div class="main_wrapper">
+    <h4><ユーザーページ></h4>
+  <div class="user-info">
+     <div class="user-flame">
+       <div class="user-image" ><%= image_tag current_user.image %></div>
+       <div class="user-text">
+          <h2><%= current_user.nickname %><span>さん</span></h2><br><br><br></br></br></br>
+          <div class="comment-count">
+              <h3>コメント数</h3>
+          </div>
+      </div>
+     </div>
+  </div>
+  
+  <div class="user-review">
+      <h4><<%= current_user.nickname %><span>さんの投稿履歴</span>></%></h4>
+       <ul style="padding: 0">
+         <%  current_user.reviews.each do |review| %>
+         <li>
+             <div class="rating-star"></div>
+             <div class="user_review"><%= review.review %></div>
+         </li>
+    <% end%>
+  </div>
+</div>
