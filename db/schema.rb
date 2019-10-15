@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_09_30_093734) do
     t.string "title"
     t.text "image_url"
     t.string "explain"
+    t.text "access"
   end
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

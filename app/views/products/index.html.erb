@@ -5,181 +5,67 @@
         </div>
         <div class="portion" style="float:left">
           <p>一覧</p>
-          
-          <a href="https://6ca7df936be1486082445c21fdbdc1f5.vfs.cloud9.us-east-2.amazonaws.com/products/1">
+              <% @products.each do |product| %>
+              <a href="/products/<%= product.id %>">
           <div class="article">
             <div class="article-image">
               <div class="image">
-                <img src="https://d1f5hsy4d47upe.cloudfront.net/0b/0bba0f3078346b9f9a3253a1985f3b6b_t.jpeg" width="150" height="150">
+                <img src="<%= product.image_url %>" width="150" height="150">
               </div>
              </div>
               <div class="article-text">
-                        <div class="detail-name">熱海温泉</div>
-                        <div class="explain">日本の三大温泉の一つとも言われる</div>
+                        <div class="detail-name"><%= product.title %></div>
+                        <div class="explain"><%= product.explain.truncate(41) %></div>
                         <div class="access">
-                            JR東海道新幹線熱海駅下車からタクシーで5~10分</div>
+                            <%= product.access %></div>
                         <div class="evaluation">
-                            (rate 数)
+                          <span class="rating-star">
+                            <i class="star-actived rate-[ここに評価を表示]0"></i>
+                          </span>
                         </div>
               </div>
            </div>
-           </a>
-           
-           <a href="https://6ca7df936be1486082445c21fdbdc1f5.vfs.cloud9.us-east-2.amazonaws.com/products/2">
-           <div class="article">
-            <div class="article-image">
-              <div class="image">
-                <img src="https://travel.biglobe.ne.jp/onsen/photos/22001765_1969_1.jpg" width="150" height="150">
-              </div>
-             </div>
-              <div class="article-text">
-                        <div class="detail-name">下田温泉</div>
-                        <div class="explain">紫陽花も楽しめる南国情緒と歴史情緒ある温泉地</div>
-                        <div class="access">伊豆急行伊豆急下田から徒歩で10分</div>
-                        <div class="evaluation">
-                            (rate 数)
-                        </div>
-            </div>
-           </div>
-           </a>
-           
-           <a href="https://6ca7df936be1486082445c21fdbdc1f5.vfs.cloud9.us-east-2.amazonaws.com/products/3">
-          <div class="article">
-            <div class="article-image">
-              <div class="image">
-                <img src="https://travel.biglobe.ne.jp/onsen/photos/23059P74_1.JPG" width="150" height="150">
-              </div>
-             </div>
-              <div class="article-text">
-                        <div class="detail-name">土肥温泉</div>
-                        <div class="explain">カップルの聖地である恋人岬をはじめ、美しい夕日がのぞめる旅人岬、世界一の花時計などの観光名所</div>
-                        <div class="access">伊豆箱根鉄道駿豆線修善寺駅から東海バス松崎行きで50分、土肥温泉下車すぐ</div>
-                        <div class="evaluation">
-                            (rate 数)
-                        </div>
-            </div>
-           </div>
-           </a>
-           
-           <a href="https://6ca7df936be1486082445c21fdbdc1f5.vfs.cloud9.us-east-2.amazonaws.com/products/4">
-           <div class="article">
-            <div class="article-image">
-              <div class="image">
-                <img src="https://static.yukoyuko.net/images/onsen/onsen_0009_0001_300.jpg" width="150" height="150">
-              </div>
-             </div>
-              <div class="article-text">
-                        <div class="detail-name">熱川温泉</div>
-                        <div class="explain">綺麗な海を間近にしたリゾート温泉</div>
-                        <div class="access">伊豆急行伊豆熱川駅から徒歩６分</div>
-                        <div class="evaluation">
-                            (rate 数)
-                        </div>
-            </div>
-           </div>
-           </a>
-           
-           <a href="https://6ca7df936be1486082445c21fdbdc1f5.vfs.cloud9.us-east-2.amazonaws.com/products/5">
-            <div class="article">
-            <div class="article-image">
-              <div class="image">
-                <img src="https://static.yukoyuko.net/photo/4873/bath/a0L6F00001CN9CCUA1/1/0002_300.jpg" width="150" height="150">
-              </div>
-             </div>
-              <div class="article-text">
-                        <div class="detail-name">伊東温泉</div>
-                        <div class="explain">古き良き温泉情緒と凄みある名所に魅了される</div>
-                        <div class="access">JR伊東線伊東駅からタクシーで25~30分</div>
-                        <div class="evaluation">
-                            (rate 数)
-                        </div>
-            </div>
-           </div>
-           </a>
-           
-           <a href="https://6ca7df936be1486082445c21fdbdc1f5.vfs.cloud9.us-east-2.amazonaws.com/products/6">
-               <div class="article">
-                <div class="article-image">
-                  <div class="image">
-                    <img src="https://travel.biglobe.ne.jp/onsen/photos/22000660_00002.jpg" width="150" height="150">
-                  </div>
-                 </div>
-                  <div class="article-text">
-                            <div class="detail-name">伊豆長岡温泉</div>
-                            <div class="explain">山間に広がるお肌すべすべ温泉地</div>
-                            <div class="access">伊豆長岡駅からバスで約5～15分</div>
-                            <div class="evaluation">
-                                (rate 数)
-                            </div>
-                </div>
-               </div>
-               </a>
-               
-               <a href="https://6ca7df936be1486082445c21fdbdc1f5.vfs.cloud9.us-east-2.amazonaws.com/products/7">
-                <div class="article">
-                <div class="article-image">
-                  <div class="image">
-                    <img src="https://travel.biglobe.ne.jp/onsen/photos/22001801_3895_1.jpg" width="150" height="150">
-                  </div>
-                 </div>
-                  <div class="article-text">
-                            <div class="detail-name">修繕寺温泉</div>
-                            <div class="explain">最も古く最も賑やかな温泉街を持つ「日本100名湯」にも選ばれる</div>
-                            <div class="access">伊豆箱根鉄道修善寺駅よりバスで約10分</div>
-                            <div class="evaluation">
-                                (rate 数)
-                            </div>
-                </div>
-               </div>
-               </a>
-               
-               <a href="https://6ca7df936be1486082445c21fdbdc1f5.vfs.cloud9.us-east-2.amazonaws.com/products/8">
-                <div class="article">
-                <div class="article-image">
-                  <div class="image">
-                    <img src="https://travel.biglobe.ne.jp/onsen/photos/23069PTYT110_02.JPG" width="150" height="150">
-                  </div>
-                 </div>
-                  <div class="article-text">
-                            <div class="detail-name">浜名湖かんざんじ温泉</div>
-                            <div class="explain">風光明媚で立地条件もよく、浜名湖遊覧の基地として賑わっている</div>
-                            <div class="access">ＪＲ浜松駅より路線バスで４５分（舘山寺温泉行き）　浜松西ＩＣより15分</div>
-                            <div class="evaluation">
-                                (rate 数)
-                            </div>
-                </div>
-               </div>
-               </a>
-               
-               <a href="https://6ca7df936be1486082445c21fdbdc1f5.vfs.cloud9.us-east-2.amazonaws.com/products/9">
-                <div class="article">
-                <div class="article-image">
-                  <div class="image">
-                    <img src="https://travel.biglobe.ne.jp/onsen/photos/23059P63_1.JPG" width="150" height="150">
-                  </div>
-                 </div>
-                  <div class="article-text">
-                            <div class="detail-name">稲取温泉</div>
-                            <div class="explain">海を望む眺望がすばらしい旅館や露天風呂が多い</div>
-                            <div class="access">伊豆急行伊豆稲取駅からタクシーで5～10分</div>
-                            <div class="evaluation">
-                                (rate 数)
-                            </div>
-                </div>
-               </div>
-               </a>
+              </a>
+              <% end %>
           </div>
          <div class="ranking" style="float:right">
             <p>ランキング</p>
-            <div class="ranking-detail">
-                
-            </div>
+            <% @ranking.each.with_index(1) do |product, i| %>
+             <div class="ranking-detail">
+                 <a href="/products/<%= product.id %>">
+                 <div class="ranking_number"><%= i %></div>
+                 <div class="ranking_image" style="text-align:center">
+                <img src="<%= product.image_url %>" alt=""width="300" height="200" >
+                </div>
+                  <p>
+                    <%= product.title %>
+                  </p>
+                </a>
+             </div>
+            <%end%>
         </div>
     </div>
-       <div class="recently" style="float:left">
-        最近の口コミ
-       </div>
-       
+    <div class="recently" style="float:right">
+        <p>最近の口コミ</p>
+      <% @reviews.each do |review| %>
+       <div class="comment-review">
+         <div classs="comment-user">
+          <div class="comment-image">
+            <img src="<%= review.product.image_url %>" width="100" height="100"></img>
+             <div class="comment-username"><%= review.user.nickname %></div>
+             <p class="text-small">
+             <span class="rating-star"><i class="star-actived rate-<%= review.rate %>0"></i></span>
+             </p>
+          </div>
+         </div>
+          
+          <div class="comment-info">
+            <div class="comment-title">
+              <%= review.title %></div>
+            <div class="comment-comment"><%= review.review%></div>
+          </div>
+        </div>
+         <% end %>
     </div>
 </div>
     

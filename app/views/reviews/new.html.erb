@@ -16,6 +16,9 @@
             <%= f.number_field :rate, placeholder: '評価', value: 1, max: 5, min: 1, html: { class: "evaluation", style: 'text-align: right;' } %>
           </div>
           <div style="margin: 8px 0">
+            <%= f.text_field :title, placeholder: 'タイトル'%>
+          </div>
+          <div style="margin: 8px 0">
             <%= f.text_area :review, placeholder: 'レビューを書いてね！', style: 'width: 100%; height: 200px;' %>
           </div>
           <div class="row">
