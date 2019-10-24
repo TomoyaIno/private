@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, except: :index
   
   def new
     @review = Review.new
@@ -14,4 +15,5 @@ class ReviewsController < ApplicationController
   def create_params
     params.require(:review).permit(:rate, :title, :review).merge(product_id: params[:product_id], user_id: current_user.id)
   end
+  
 end

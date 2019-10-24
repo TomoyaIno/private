@@ -21,16 +21,23 @@
   
    <div class="comment-show">
     <h2>口コミ</h2>
-     <ul style="padding: 0">
       <% @product.reviews.each do |review| %>
-      <li style="border-bottom: dotted">
-       <h3><%= review.user.nickname %></h3>
-        <p class="text-small">
-         <span class="rating-star"><i class="star-actived rate-<%= review.rate %>0"></i></span>
-        </p>
-       <p><%= review.review%></p>
-      </li>
-      <% end %>
-     </ul>
+       <div class="comment-review">
+         <div classs="comment-user">
+          <div class="comment-image">
+             <p class="text-small">
+             <span class="rating-star"><i class="star-actived rate-<%= review.rate %>0"></i></span>
+             </p>
+          </div>
+         </div>
+          
+          <div class="comment-info">
+            <div class="comment-username"><span><<%= review.user.nickname %>さん></span></%></div>
+            <div class="comment-title">
+              <%= review.title %></div>
+            <div class="comment-comment"><%= review.review%></div>
+          </div>
+        </div>
+         <% end %>
    </div>
  </div>

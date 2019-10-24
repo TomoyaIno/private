@@ -14,12 +14,26 @@
   
   <div class="user-review">
       <h4><<%= current_user.nickname %><span>さんの投稿履歴</span>></%></h4>
-       <ul style="padding: 0">
          <%  current_user.reviews.each do |review| %>
-         <li>
-             <div class="rating-star"></div>
-             <div class="user_review"><%= review.review %></div>
-         </li>
-    <% end%>
+       <div class="comment-review">
+         <div classs="comment-user">
+          <div class="comment-image">
+            <img src="<%= review.product.image_url %>" width="100" height="100"></img>
+             <div class="comment-image-title"><%= review.product.title %></div>
+             <p class="text-small">
+             <span class="rating-star"><i class="star-actived rate-<%= review.rate %>0"></i></span>
+             </p>
+          </div>
+         </div>
+          
+          <div class="comment-info">
+            <div class="comment-title">
+              <%= review.title %></div>
+            <div class="comment-comment"><%= review.review%></div>
+          </div>
+        </div>
+        <%= link_to 'edit', "/reviews/#{review.id}/edit", method: :get%>
+         <% end %>
+         <%= paginate(@reviews)%>
   </div>
 </div>
