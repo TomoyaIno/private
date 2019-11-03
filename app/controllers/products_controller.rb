@@ -10,7 +10,10 @@ class ProductsController < ApplicationController
   end
   
   def new
-    @products = Product.page(params[:page]).per(9)
+    @product = Product.new
+  end
+  
+  def create
   end
   
   def show

@@ -32,7 +32,6 @@
             <div class="comment-comment"><%= review.review%></div>
           </div>
         </div>
-        <%= link_to 'edit', "/reviews/#{review.id}/edit", method: :get%>
          <% end %>
          <%= paginate(@reviews)%>
   </div>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
      collection do
       get 'detail'
     end
-  resources :reviews, only: [:new, :create, :edit, :delete, :update]
+  resources :reviews, only: [:new, :create, :update]
   resources :users, only: :show
 end
   root 'products#index'

@@ -10,13 +10,12 @@
      <div class="shousai-explain">
       <%= @product.explain %>
      </div>
-     
-      <div class="example">
-       <h2>代表的な温泉</h2>
-       <img></img>
-       <img></img>
-       <img></img>
-      </div>
+      
+      <div class="toko-page-flame" style="float:right">
+      <a href="/products/<%= @product.id %>/reviews/new" title="<%= @product.title%>">
+       コメント
+       </a>
+       </div>
   </div>
   
    <div class="comment-show">

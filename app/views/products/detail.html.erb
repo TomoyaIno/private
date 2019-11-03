@@ -3,11 +3,8 @@
     <div class="post-name">
       <p>温泉一覧</p>
       <% @products.each do |product|%>
-      
-      
-       
         <div class="post-itiran">
-          <a href="/products/<%= product.id %>/reviews/new" title="<%= product.title%>">
+          <a href="/products/<%= product.id %>">
          <div class="title_">
            <%= product.title %>
          </div>

@@ -52,6 +52,9 @@ body{
   text-align:center;
   border: 3px inset gray;
 }
+.portion h5{
+  padding-right:10px;
+}
 .article{
   display:flex; 
   border-bottom: 3px solid orange;
