@@ -1,19 +1,22 @@
- <div class="main_wrapper">
+ <div class="main_wrapper" style="padding:15px">
   <h3><詳細ページ></h3>
-  <div class="shousai">
-   <div class="shousai-title">
+   <div class="name-creater">
+    <h4><%= @product.user.nickname %><span>さんによる投稿情報です</span></%></h4>
+   </div>
+  <div class="shousai" style="clear:right">
+     <div class="shousai-title">
      <%= @product.title %>
      </div>
-   <div class="shousai-image" style="text-align:center">
+    <div class="shousai-image" style="text-align:center">
      <img src="<%= @product.image_url %>" alt="<%= @product.title %>"width="750" height="350">
-     </div>
+    </div>
      <div class="shousai-explain">
       <%= @product.explain %>
      </div>
       
       <div class="toko-page-flame" style="float:right">
       <a href="/products/<%= @product.id %>/reviews/new" title="<%= @product.title%>">
-       コメント
+       コメントする
        </a>
        </div>
   </div>

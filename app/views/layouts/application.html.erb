@@ -21,11 +21,14 @@
               <li class="mypage" style="float: right">
                 <a href="/products/:product_id/users/<%= current_user.id %>">マイページ</a>
               </li>
-              <% end %>
+
             <li class="new" style="float :right">
               <%= link_to "投稿", new_product_path, class:'post' %></li>
-            <li class="signin" style="float :right">
+              <%else%>
+            <li class="signin" style="float :right", >
               <%= link_to "サインイン", user_session_path, class:'post' %></li>
+              <% end %>
+              
           </ul>
           <p><i>心地よい温もりをあなたに</i></p>
         </div>

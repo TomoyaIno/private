@@ -1,4 +1,4 @@
-<div class="main_wrapper">
+<div class="main_wrapper" style="padding:15px">
     <h4><ユーザーページ></h4>
   <div class="user-info">
      <div class="user-flame">
@@ -6,7 +6,7 @@
        <div class="user-text">
           <h2><%= current_user.nickname %><span>さん</span></h2><br><br><br></br></br></br>
           <div class="comment-count">
-              <h3>コメント数</h3>
+              <span>コメント数<%= @count_reviews.count %>件</span>
           </div>
       </div>
      </div>
@@ -14,12 +14,12 @@
   
   <div class="user-review">
       <h4><<%= current_user.nickname %><span>さんの投稿履歴</span>></%></h4>
-         <%  current_user.reviews.each do |review| %>
+         <%  @reviews.each do |review| %>
        <div class="comment-review">
          <div classs="comment-user">
           <div class="comment-image">
             <img src="<%= review.product.image_url %>" width="100" height="100"></img>
-             <div class="comment-image-title"><%= review.product.title %></div>
+             <div class="comment-image-title"><%= review.product.title.truncate(7)%></div>
              <p class="text-small">
              <span class="rating-star"><i class="star-actived rate-<%= review.rate %>0"></i></span>
              </p>

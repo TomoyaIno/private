@@ -1,14 +1,18 @@
+<div style="padding:15px">
 <div class="contents row">
     <h3><新規投稿ページ></h3>
 </div>
 
 <div class="username-comment">
-  <span><%= current_user.nickname %></span>
+  <<%= current_user.nickname %><span>さんの投稿</span>></%>
 </div>
 
 <%= form_for [@product] do |f| %>
   <div style="margin: 8px ">
     <%= f.text_field :title, placeholder: '温泉の名前'%>
+  </div>
+  <div style="margin: 8px ">
+    <%= f.text_field :image_url, placeholder: 'urlのコピーを添付'%>
   </div>
   <div style="margin: 8px ">
     <%= f.text_area :explain, placeholder: '温泉の説明（概要）', style: 'width: 100%; height: 200px;' %>
@@ -20,3 +24,4 @@
     <%= f.submit "送信", class: "btn btn-primary withripple" %>
   </div>
 <% end %>
+</div>

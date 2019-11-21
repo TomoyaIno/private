@@ -1,3 +1,7 @@
+*{
+  padding:0;
+  margin:0;
+}
 .header{
   height:80px;
   background-color: #ffdead;
@@ -5,7 +9,7 @@
 .user__info{
   text-decoration:none;
   color: #00000;
-  line-height:70px
+  line-height:75px
 }
 .user__info li{
   font-size:18px;
@@ -143,8 +147,38 @@ body{
 .main_wrapper{
   padding:0 30px;
 }
+.name-creater {
+    float:right;
+    position: relative;
+    margin: 10px 200px 10px 0;
+    padding: 8px 15px;
+    background: #ffa07a;
+    border-radius: 30px;
+}
+.name-creater:before{font-family: FontAwesome;
+    content: "\f111";
+    position: absolute;
+    font-size: 15px;
+    left: -40px;
+    bottom: 0;
+    color: #ffa07a;
+}
+.name-creater:after{
+    font-family: FontAwesome;
+    content: "\f111";
+    position: absolute;
+    font-size: 23px;
+    left: -23px;
+    bottom: 0;
+    color: #ffa07a;
+}
+.name-creater h4 {
+   color:white;
+    margin: 0; 
+    padding: 0;
+}
 .shousai-title{
-  padding:0 400px;
+  margin:0 400px;
   font-weight:50px;
   font-size:24px;
 }
@@ -202,4 +236,8 @@ body{
 .user-text h3{
   float:right;
   padding:0 40px;
+}
+.comment-count{
+  float:right;
+  margin-right:80px
 }
